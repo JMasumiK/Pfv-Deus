@@ -1,0 +1,91 @@
+/* Basic styling for the lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999; /* Set a higher z-index for the lightbox */
+}
+
+.lightbox img {
+    max-width: 80%;
+    height: auto;
+    max-height: 80%;
+    display: block;
+    margin: auto;
+    z-index: 1000; /* Set a higher z-index for the lightbox image */
+}
+
+/* Header styling */
+header {
+    text-align: center; /* Center-align the content within the header */
+}
+
+/* Main styling */
+main {
+    text-align: center; /* Center-align the content within the main */
+}
+
+.gallery-item {
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 20px;
+    position: relative; /* Set position to relative */
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Adjust the maximum height of the gallery images */
+    display: block;
+    margin: auto;
+    position: relative; /* Set position to relative */
+    z-index: 1; /* Set z-index for the gallery image */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-out;
+    z-index: 2; /* Set a higher z-index on hover to ensure it's above other elements */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        text-align: left; /* Align left on smaller screens */
+    }
+
+    .gallery-item {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .gallery-item img {
+        max-width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    .lightbox img {
+        max-width: 100%; /* Adjust for mobile screens */
+        max-height: 100%; /* Adjust for mobile screens */
+    }
+}
+footer {
+    text-align: center; /* Center-align the content within the footer */
+}
+body {
+    font-family: Arial, sans-serif; /* Use a generic font family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #000000; /* Set a light background color */
+}
+.Words {
+    color: rgb(255, 255, 255); /* Set the text color to white */
+    font-size: 20px; /* Set the font size */
+    margin: 20px; /* Add some margin around the text */
+}
